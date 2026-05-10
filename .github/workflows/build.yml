@@ -24,11 +24,11 @@ jobs:
           gradle-version: '8.2'
 
       - name: Build Debug APK
-        working-directory: ExpenseLogs/ExpenseLogs/ExpenseLogs
+        working-directory: ExpenseLogs/ExpenseLogs
         run: gradle assembleDebug
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
           name: ExpenseLog-APK
-          path: ExpenseLogs/ExpenseLogs/ExpenseLogs/app/build/outputs/apk/debug/app-debug.apk
+          path: ExpenseLogs/ExpenseLogs/app/build/outputs/apk/debug/app-debug.apk
