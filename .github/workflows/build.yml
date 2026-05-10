@@ -1,5 +1,3 @@
 - name: Build Debug APK
         working-directory: ExpenseLogs/ExpenseLogs
-        run: |
-          chmod +x gradlew
-          ./gradlew assembleDebug --warning-mode all
+        run: gradle assembleDebug --warning-mode all
