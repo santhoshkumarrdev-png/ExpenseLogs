@@ -19,13 +19,13 @@ jobs:
           distribution: 'temurin'
 
       - name: Make gradlew executable
-        run: chmod +x ./gradlew
+        run: chmod +x ExpenseLogs/ExpenseLogs/gradlew
 
       - name: Build Debug APK
-        run: ./gradlew assembleDebug
+        run: cd ExpenseLogs/ExpenseLogs && ./gradlew assembleDebug
 
       - name: Upload APK
         uses: actions/upload-artifact@v3
         with:
           name: ExpenseLog-APK
-          path: app/build/outputs/apk/debug/app-debug.apk
+          path: ExpenseLogs/ExpenseLogs/app/build/outputs/apk/debug/app-debug.apk
