@@ -1,3 +1,0 @@
-- name: Build Debug APK
-        working-directory: ExpenseLogs/ExpenseLogs
-        run: gradle assembleDebug --warning-mode all
